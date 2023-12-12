@@ -1,7 +1,7 @@
 import axios from 'axios'
 import Form from 'react-bootstrap/Form'
 
-function Formulario({id,setShow}) {
+function Formulario({funcionario,setShow}) {
     function enviarDados(event){
         event.preventDefault()
         const nome = event.target[0].value
@@ -42,22 +42,22 @@ function Formulario({id,setShow}) {
             <Form onSubmit={enviarDados}>
                 <Form.Group>
                     <Form.Label>Nome:</Form.Label>
-                    <Form.Control type="text" defaultValue={funcionario.nome}/>
+                    <Form.Control type="text" defaultValue={funcionario?.nome} required/>
                 </Form.Group>
     
                 <Form.Group>
                     <Form.Label>Cargo:</Form.Label>
-                    <Form.Control type="text" defaultValue={funcionario.cargo}/>
+                    <Form.Control type="text" defaultValue={funcionario?.cargo} required/>
                 </Form.Group>
     
                 <Form.Group>
                     <Form.Label>Departamento:</Form.Label>
-                    <Form.Control type="text" defaultValue={funcionario.departamento}/>
+                    <Form.Control type="text" defaultValue={funcionario?.departamento} required/>
                 </Form.Group>
     
                 <Form.Group>
                     <Form.Label>Salário:</Form.Label>
-                    <Form.Control type="text" defaultValue={funcionario.salario}/>
+                    <Form.Control type="text" defaultValue={funcionario?.salario} required/>
                 </Form.Group>
     
                 <Form.Group>

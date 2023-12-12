@@ -1,14 +1,14 @@
 
 import Modal from 'react-bootstrap/Modal'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { CiEdit } from "react-icons/ci";
 import axios from 'axios';
 import Formulario from './formulario';
 
 
-function Editar({ id }) {
+function Editar({ id}) {
     const [show, setShow] = useState(false)
-    const [funcionario, setFuncionario] = useState(false)
+    const [funcionario, setFuncionario] = useState([])
 
     useEffect(()=>{
         axios.get("https://apiaulas.thiagodev502.repl.co/funcionarios/"+ id)
@@ -27,7 +27,7 @@ function Editar({ id }) {
                     <h2>Editar</h2>
                 </Modal.Header>
                 <Modal.Body>
-                    <Formulario id={funcionario} setShow={setShow} />
+                    <Formulario funcionario={funcionario} setShow={setShow} />
                 </Modal.Body>
                 <Modal.Footer>
                 </Modal.Footer>
