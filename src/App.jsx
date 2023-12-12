@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 function App(){
   const autentic = localStorage.getItem("key") === 'token' || false
 
-  console.log
   return(
     <>
       <BrowserRouter>
