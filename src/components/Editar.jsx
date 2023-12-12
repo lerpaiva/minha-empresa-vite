@@ -1,9 +1,10 @@
-import { ModalBody, ModalFooter, ModalHeader } from 'react-bootstrap'
+
 import Modal from 'react-bootstrap/Modal'
 import Button from 'react-bootstrap/Button'
 import { useState } from 'react'
 import { CiEdit } from "react-icons/ci";
 import Formulario from './formulario';
+import axios from 'axios';
 
 
 function Editar({id}){
