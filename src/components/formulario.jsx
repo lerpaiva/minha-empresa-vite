@@ -27,7 +27,6 @@ function Formulario({funcionario,setShow}) {
                 departamento,
                 salario
             } ).then(()=>{
-                setShow(false)
                 window.location.reload()
 
             })
